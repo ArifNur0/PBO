@@ -2,7 +2,7 @@ jepang = []
 korea = []
 inggris = []
 
-
+# 
 class Music :
     def __init__(self, Judul, Penyanyi, Genre):
         self.Judul = Judul
@@ -46,7 +46,7 @@ class EnglishSong(Music):
         super().__init__(Judul, Penyanyi, Genre)
 
     def Add():
-        global korea
+        global inggris
         Judul = input("Masukkan Judul Music: ")
         Penyanyi = (input("Masukkan Nama penyanyi : "))
         Genre = (input("Masukkan Genre  Music : "))
@@ -108,7 +108,20 @@ def TampilUrut() :
     for i in range(len(inggris)):
         print(f"{inggris[i].Judul}  {inggris[i].Penyanyi}  {inggris[i].Genre}")
 
-            
+def HapusMusic():
+    global jepang, korea, inggris
+    judul = input("Masukkan judul lagu yang ingin dihapus: ")
+    for i in range(len(jepang)):
+        if judul in jepang[i].Judul:
+            del jepang[i]
+    for i in range(len(korea)):
+        if judul in korea[i].Judul:
+            del korea[i]        
+    for i in range(len(inggris)):
+        if judul in inggris[i].Judul:
+            del inggris[i]
+
+
 def main():
    while True: 
     print("==== ==== ==== PlayList Music ==== ==== ====")
@@ -132,8 +145,10 @@ def main():
             Penyanyi = (input("Masukkan Nama penyanyi : "))
             Genre = (input("Masukkan Genre  Music : "))
             jepang.append(JapaneseSong(Judul,Penyanyi,Genre))
+
         elif pilih == 2 :
-            jepang.Delete(JapaneseSong)
+            HapusMusic()
+
         elif pilih == 3 :
             print("==== ==== ==== Japanese Song ==== ==== ====")
             print("Judul               |           Penyanyi          |     Genre")
@@ -149,9 +164,15 @@ def main():
         print("4. Kembali")
         pilih = int(input("Masukkan Pilihan Anda : "))
         if pilih == 1 :
-            korea.Add(KoreanSong)
+            global korea
+            Judul = input("Masukkan Judul Music: ")
+            Penyanyi = (input("Masukkan Nama penyanyi : "))
+            Genre = (input("Masukkan Genre  Music : "))
+            korea.append(KoreanSong(Judul,Penyanyi,Genre))
+
         elif  pilih == 2 :
-            korea.Delete(KoreanSong)
+            HapusMusic()
+
         elif pilih == 3 :
             print("==== ==== ==== Korean Song ==== ==== ====")
             print("Judul               |           Penyanyi          |     Genre")
@@ -167,10 +188,16 @@ def main():
         print("4. Kembali")
         pilih = int(input("Masukkan Pilihan Anda : "))
         if pilih == 1 :
-            inggris.Add(EnglishSong)
+            global inggris
+            Judul = input("Masukkan Judul Music: ")
+            Penyanyi = (input("Masukkan Nama penyanyi : "))
+            Genre = (input("Masukkan Genre  Music : "))
+            inggris.append(EnglishSong(Judul,Penyanyi,Genre))
+
 
         elif pilih == 2 :
-            inggris.Delete(EnglishSong)
+            HapusMusic()
+
         elif pilih == 3 :
             print("==== ==== ==== English Song ==== ==== ====")
             print("Judul               |           Penyanyi          |     Genre")
