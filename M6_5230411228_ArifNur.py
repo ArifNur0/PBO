@@ -70,32 +70,32 @@ def main():
         pilih = int(input("Masukkan Pilihan   :"))
         if pilih == 1:
             jml = int(input("Masukkan  Jumlah :"))
-            print(f" Total Bayar : {jml * 10000}")
             info = input("Masukkan Detail Pesanan :")
+            print(f" Total Bayar : {jml * 10000}")
             sk.display
 
         elif pilih == 2:
             jml = int(input("Masukkan  Jumlah :"))
-            print(f" Total Bayar : {jml * 15000}")
             info = input("Masukkan Detail Pesanan :")
+            print(f" Total Bayar : {jml * 15000}")
             sk.display
 
         elif pilih == 3:
             jml = int(input("Masukkan  Jumlah :"))
-            print(f" Total Bayar : {jml * 8000}")
             info = input("Masukkan Detail Pesanan :")
+            print(f" Total Bayar : {jml * 8000}")
             sk.display
 
         elif pilih == 4:
             jml = int(input("Masukkan  Jumlah :"))
-            print(f" Total Bayar : {jml * 5000}")
             info = input("Masukkan Detail Pesanan :")
+            print(f" Total Bayar : {jml * 5000}")
             sk.display
 
         elif pilih == 5:
             jml = int(input("Masukkan  Jumlah :"))
-            print(f" Total Bayar : {jml * 10000}")
             info = input("Masukkan Detail Pesanan :")
+            print(f" Total Bayar : {jml * 10000}")
             sk.display
 
         else:
