@@ -58,10 +58,9 @@ def main():
     pilih = int(input("Masukkan Pilihan  : "))
     if pilih == 1:
         nama = input("Masukkan Nama  :")
-        info = input("Masukkan  :")
         tgl = input("Masukkan Tanggal  :")
         alamat = input("Masukkan Alamat :")
-        mhs = Delivery(id,nama,info,tgl,alamat)
+        sk = Delivery(id,nama,info,tgl,alamat)
         print(" =    =    =    = Pesan =    =    =    = ")
         print("1 . Bakso       - Rp10000")
         print("2 . Sate        - Rp15000")
@@ -71,20 +70,34 @@ def main():
         pilih = int(input("Masukkan Pilihan   :"))
         if pilih == 1:
             jml = int(input("Masukkan  Jumlah :"))
-            print(f"Total : {jml * 10000}")
+            print(f" Total Bayar : {jml * 10000}")
+            info = input("Masukkan Detail Pesanan :")
+            sk.display
 
         elif pilih == 2:
             jml = int(input("Masukkan  Jumlah :"))
-            print(f"Total : {jml * 15000}")
+            print(f" Total Bayar : {jml * 15000}")
+            info = input("Masukkan Detail Pesanan :")
+            sk.display
+
         elif pilih == 3:
             jml = int(input("Masukkan  Jumlah :"))
-            print(f"Total : {jml * 8000}")
+            print(f" Total Bayar : {jml * 8000}")
+            info = input("Masukkan Detail Pesanan :")
+            sk.display
+
         elif pilih == 4:
             jml = int(input("Masukkan  Jumlah :"))
-            print(f"Total : {jml * 5000}")
+            print(f" Total Bayar : {jml * 5000}")
+            info = input("Masukkan Detail Pesanan :")
+            sk.display
+
         elif pilih == 5:
             jml = int(input("Masukkan  Jumlah :"))
-            print(f"Total : {jml * 10000}")
+            print(f" Total Bayar : {jml * 10000}")
+            info = input("Masukkan Detail Pesanan :")
+            sk.display
+
         else:
             print("Pilihan Tidak Tersedia")
 
