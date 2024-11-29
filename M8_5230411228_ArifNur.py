@@ -15,7 +15,6 @@ class SuhuKoverterApp:
         # Membuat label dan entry untuk input suhu
         self.label = ttk.Label(self.frame, text="Masukkan suhu:", font=("Times New Roman", 14, "bold"))
         self.label.pack(pady=10)
-
         self.entry = ttk.Entry(self.frame, width=20, font=("Times New Roman", 14))
         self.entry.pack(pady=10)
 
@@ -23,18 +22,14 @@ class SuhuKoverterApp:
         self.input_scale_var = tk.StringVar(value="Celsius")
         self.input_scale_label = ttk.Label(self.frame, text="Pilih jenis suhu input:", font=("Times New Roman", 14))
         self.input_scale_label.pack(pady=10)
-
-        self.input_scale_menu = ttk.Combobox(self.frame, textvariable=self.input_scale_var,
-                                              values=["Celsius", "Fahrenheit", "Kelvin", "Reamur"], font=("Times New Roman", 14))
+        self.input_scale_menu = ttk.Combobox(self.frame, textvariable=self.input_scale_var,values=["Celsius", "Fahrenheit", "Kelvin", "Reamur"], font=("Times New Roman", 14))
         self.input_scale_menu.pack(pady=10)
 
         # Pilihan untuk jenis suhu output
         self.output_scale_var = tk.StringVar(value="Fahrenheit")
         self.output_scale_label = ttk.Label(self.frame, text="Pilih jenis suhu output:", font=("Times New Roman", 14))
         self.output_scale_label.pack(pady=10)
-
-        self.output_scale_menu = ttk.Combobox(self.frame, textvariable=self.output_scale_var,
-                                               values=["Celsius", "Fahrenheit", "Kelvin", "Reamur"], font=("Times New Roman", 14))
+        self.output_scale_menu = ttk.Combobox(self.frame, textvariable=self.output_scale_var,values=["Celsius", "Fahrenheit", "Kelvin", "Reamur"], font=("Times New Roman", 14))
         self.output_scale_menu.pack(pady=10)
 
         # Tombol untuk melakukan konversi
